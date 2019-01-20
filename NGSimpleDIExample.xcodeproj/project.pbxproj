@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		A130BD9121F52F4600E586F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BD9021F52F4600E586F6 /* AppDelegate.swift */; };
 		A130BD9321F52F4600E586F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BD9221F52F4600E586F6 /* ViewController.swift */; };
-		A130BD9621F52F4600E586F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A130BD9421F52F4600E586F6 /* Main.storyboard */; };
 		A130BD9821F52F4800E586F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A130BD9721F52F4800E586F6 /* Assets.xcassets */; };
 		A130BD9B21F52F4800E586F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A130BD9921F52F4800E586F6 /* LaunchScreen.storyboard */; };
+		A130BDA321F5307800E586F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BDA221F5307800E586F6 /* NetworkService.swift */; };
+		A130BDA521F5308C00E586F6 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BDA421F5308C00E586F6 /* CatService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A130BD8D21F52F4600E586F6 /* NGSimpleDIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGSimpleDIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A130BD9021F52F4600E586F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A130BD9221F52F4600E586F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A130BD9521F52F4600E586F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A130BD9721F52F4800E586F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A130BD9A21F52F4800E586F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A130BD9C21F52F4800E586F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A130BDA221F5307800E586F6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A130BDA421F5308C00E586F6 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 			children = (
 				A130BD9021F52F4600E586F6 /* AppDelegate.swift */,
 				A130BD9221F52F4600E586F6 /* ViewController.swift */,
-				A130BD9421F52F4600E586F6 /* Main.storyboard */,
 				A130BD9721F52F4800E586F6 /* Assets.xcassets */,
 				A130BD9921F52F4800E586F6 /* LaunchScreen.storyboard */,
 				A130BD9C21F52F4800E586F6 /* Info.plist */,
+				A130BDA221F5307800E586F6 /* NetworkService.swift */,
+				A130BDA421F5308C00E586F6 /* CatService.swift */,
 			);
 			path = NGSimpleDIExample;
 			sourceTree = "<group>";
@@ -124,7 +127,6 @@
 			files = (
 				A130BD9B21F52F4800E586F6 /* LaunchScreen.storyboard in Resources */,
 				A130BD9821F52F4800E586F6 /* Assets.xcassets in Resources */,
-				A130BD9621F52F4600E586F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A130BDA521F5308C00E586F6 /* CatService.swift in Sources */,
 				A130BD9321F52F4600E586F6 /* ViewController.swift in Sources */,
+				A130BDA321F5307800E586F6 /* NetworkService.swift in Sources */,
 				A130BD9121F52F4600E586F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A130BD9421F52F4600E586F6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A130BD9521F52F4600E586F6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A130BD9921F52F4800E586F6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
