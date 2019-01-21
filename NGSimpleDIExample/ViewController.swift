@@ -24,9 +24,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        // HERE
-        let service: CatServiceInterface = CatService()
-        service.getCatImage(width: 300, height: 400, completion: { result in
+        let catService = getCatService()
+        catService.getCatImage(width: 300, height: 400, completion: { result in
             switch result {
             case let .error(error):
                 print(error)

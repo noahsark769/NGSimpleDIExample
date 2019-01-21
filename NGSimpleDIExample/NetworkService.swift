@@ -13,11 +13,15 @@ enum Result<T> {
     case error(error: Error)
 }
 
+let getNetworkService = SimpleDI.bind(NetworkInterface.self) { NetworkService.shared }
+
 protocol NetworkInterface {
     func makeRequest(url: URL, completion: @escaping (Result<Data>) -> Void)
 }
 
-class NetworkService: NetworkInterface {
+private class NetworkService: NetworkInterface {
+    static let shared = NetworkService()
+
     func makeRequest(url: URL, completion: @escaping (Result<Data>) -> Void) {
         let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             if let error = error {

@@ -13,7 +13,19 @@
 		A130BD9B21F52F4800E586F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A130BD9921F52F4800E586F6 /* LaunchScreen.storyboard */; };
 		A130BDA321F5307800E586F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BDA221F5307800E586F6 /* NetworkService.swift */; };
 		A130BDA521F5308C00E586F6 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BDA421F5308C00E586F6 /* CatService.swift */; };
+		A130BDA721F5316D00E586F6 /* SimpleDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BDA621F5316D00E586F6 /* SimpleDI.swift */; };
+		A130BDAF21F535E100E586F6 /* NGSimpleDIExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130BDAE21F535E100E586F6 /* NGSimpleDIExampleTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A130BDB121F535E100E586F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A130BD8521F52F4600E586F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A130BD8C21F52F4600E586F6;
+			remoteInfo = NGSimpleDIExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A130BD8D21F52F4600E586F6 /* NGSimpleDIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGSimpleDIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		A130BD9C21F52F4800E586F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A130BDA221F5307800E586F6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A130BDA421F5308C00E586F6 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		A130BDA621F5316D00E586F6 /* SimpleDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDI.swift; sourceTree = "<group>"; };
+		A130BDAC21F535E100E586F6 /* NGSimpleDIExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NGSimpleDIExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A130BDAE21F535E100E586F6 /* NGSimpleDIExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NGSimpleDIExampleTests.swift; sourceTree = "<group>"; };
+		A130BDB021F535E100E586F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A130BD8A21F52F4600E586F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A130BDA921F535E100E586F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				A130BD8F21F52F4600E586F6 /* NGSimpleDIExample */,
+				A130BDAD21F535E100E586F6 /* NGSimpleDIExampleTests */,
 				A130BD8E21F52F4600E586F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				A130BD8D21F52F4600E586F6 /* NGSimpleDIExample.app */,
+				A130BDAC21F535E100E586F6 /* NGSimpleDIExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,8 +88,18 @@
 				A130BD9C21F52F4800E586F6 /* Info.plist */,
 				A130BDA221F5307800E586F6 /* NetworkService.swift */,
 				A130BDA421F5308C00E586F6 /* CatService.swift */,
+				A130BDA621F5316D00E586F6 /* SimpleDI.swift */,
 			);
 			path = NGSimpleDIExample;
+			sourceTree = "<group>";
+		};
+		A130BDAD21F535E100E586F6 /* NGSimpleDIExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A130BDAE21F535E100E586F6 /* NGSimpleDIExampleTests.swift */,
+				A130BDB021F535E100E586F6 /* Info.plist */,
+			);
+			path = NGSimpleDIExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +122,24 @@
 			productReference = A130BD8D21F52F4600E586F6 /* NGSimpleDIExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A130BDAB21F535E100E586F6 /* NGSimpleDIExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A130BDB321F535E100E586F6 /* Build configuration list for PBXNativeTarget "NGSimpleDIExampleTests" */;
+			buildPhases = (
+				A130BDA821F535E100E586F6 /* Sources */,
+				A130BDA921F535E100E586F6 /* Frameworks */,
+				A130BDAA21F535E100E586F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A130BDB221F535E100E586F6 /* PBXTargetDependency */,
+			);
+			name = NGSimpleDIExampleTests;
+			productName = NGSimpleDIExampleTests;
+			productReference = A130BDAC21F535E100E586F6 /* NGSimpleDIExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +152,10 @@
 				TargetAttributes = {
 					A130BD8C21F52F4600E586F6 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					A130BDAB21F535E100E586F6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A130BD8C21F52F4600E586F6;
 					};
 				};
 			};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				A130BD8C21F52F4600E586F6 /* NGSimpleDIExample */,
+				A130BDAB21F535E100E586F6 /* NGSimpleDIExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +188,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A130BDAA21F535E100E586F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,13 +203,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				A130BDA521F5308C00E586F6 /* CatService.swift in Sources */,
+				A130BDA721F5316D00E586F6 /* SimpleDI.swift in Sources */,
 				A130BD9321F52F4600E586F6 /* ViewController.swift in Sources */,
 				A130BDA321F5307800E586F6 /* NetworkService.swift in Sources */,
 				A130BD9121F52F4600E586F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A130BDA821F535E100E586F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A130BDAF21F535E100E586F6 /* NGSimpleDIExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A130BDB221F535E100E586F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A130BD8C21F52F4600E586F6 /* NGSimpleDIExample */;
+			targetProxy = A130BDB121F535E100E586F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A130BD9921F52F4800E586F6 /* LaunchScreen.storyboard */ = {
@@ -310,6 +392,46 @@
 			};
 			name = Release;
 		};
+		A130BDB421F535E100E586F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29P3YRFLV5;
+				INFOPLIST_FILE = NGSimpleDIExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahgilmore.NGSimpleDIExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NGSimpleDIExample.app/NGSimpleDIExample";
+			};
+			name = Debug;
+		};
+		A130BDB521F535E100E586F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29P3YRFLV5;
+				INFOPLIST_FILE = NGSimpleDIExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noahgilmore.NGSimpleDIExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NGSimpleDIExample.app/NGSimpleDIExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +449,15 @@
 			buildConfigurations = (
 				A130BDA021F52F4800E586F6 /* Debug */,
 				A130BDA121F52F4800E586F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A130BDB321F535E100E586F6 /* Build configuration list for PBXNativeTarget "NGSimpleDIExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A130BDB421F535E100E586F6 /* Debug */,
+				A130BDB521F535E100E586F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

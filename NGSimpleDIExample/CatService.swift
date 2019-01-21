@@ -8,6 +8,8 @@
 
 import UIKit
 
+let getCatService = SimpleDI.bind(CatServiceInterface.self) { CatService.shared }
+
 protocol CatServiceInterface {
     func getCatImage(width: Int, height: Int, completion: @escaping (Result<UIImage>) -> Void)
 }
@@ -17,11 +19,11 @@ class CatService: CatServiceInterface {
         case invalidImageData
     }
 
+    static let shared = CatService()
+
     func getCatImage(width: Int, height: Int, completion: @escaping (Result<UIImage>) -> Void) {
-        // HERE
         let string = "https://placekitten.com/\(width)/\(height)"
-        print(string)
-        NetworkService().makeRequest(url: URL(string: string)!, completion: { result in
+        getNetworkService().makeRequest(url: URL(string: string)!, completion: { result in
             switch result {
             case let .error(error):
                 DispatchQueue.main.async {
