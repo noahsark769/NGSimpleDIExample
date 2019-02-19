@@ -1,34 +1,27 @@
-//
-//  SimpleDI.swift
-//  NGSimpleDIExample
-//
-//  Created by Noah Gilmore on 1/20/19.
-//  Copyright © 2019 Noah Gilmore. All rights reserved.
-//
-
-import Foundation
-
-private var typeToImplementation: [String: Any] = [:]
-private var mockTypeToImplementation: [String: Any] = [:]
+private var instantiators: [String: Any] = [:]
+private var mockInstantiators: [String: Any] = [:]
 
 enum SimpleDI {
     static var isTestEnvironment = false
 
-    static func bind<T>(_ interfaceType: T.Type, accessor: () -> T) -> () -> T {
-        let key = String(describing: interfaceType)
-        typeToImplementation[key] = accessor()
-        return {
-            if SimpleDI.isTestEnvironment {
-                guard let mockedImplementation = mockTypeToImplementation[key] as? T else {
-                    fatalError("Type \(key) unmocked in test!")
-                }
-                return mockedImplementation
-            }
-            return typeToImplementation[key] as! T
-        }
+    static func bind<T>(_ interfaceType: T.Type, instantiator: @escaping () -> T) -> () -> T {
+        instantiators[String(describing: interfaceType)] = instantiator
+        return self.instance
     }
 
-    static func mock<T>(_ interfaceType: T.Type, _ mockImplementation: T) {
-        mockTypeToImplementation[String(describing: interfaceType)] = mockImplementation
+    private static func instance<T>() -> T {
+        if self.isTestEnvironment {
+            guard let mockInstantiator = mockInstantiators[String(describing: T.self)] as? () -> T else {
+                fatalError("Type \(String(describing: T.self)) unmocked in test!")
+            }
+            return mockInstantiator()
+        }
+        let key = String(describing: T.self)
+        let instantiator = instantiators[key] as! () -> T
+        return instantiator()
+    }
+
+    static func mock<T>(_ interfaceType: T.Type, instantiator: @escaping () -> T) {
+        mockInstantiators[String(describing: interfaceType)] = instantiator
     }
 }

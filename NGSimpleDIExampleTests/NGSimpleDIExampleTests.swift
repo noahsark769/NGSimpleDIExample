@@ -18,7 +18,7 @@ class NetworkThatAlwaysErrors: NetworkInterface {
 class NGSimpleDIExampleTests: XCTestCase {
     func testCatServiceReportsError() {
         SimpleDI.isTestEnvironment = true
-        SimpleDI.mock(NetworkInterface.self, NetworkThatAlwaysErrors())
+        SimpleDI.mock(NetworkInterface.self) { NetworkThatAlwaysErrors() }
 
         let expecation = self.expectation(description: "Should return error")
         let service = CatService()

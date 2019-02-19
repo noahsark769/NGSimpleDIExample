@@ -1,0 +1,7 @@
+NGSimpleDIExample.xcodeproj/project.xcworkspace
+NGSimpleDIExample.xcodeproj/xcuserdata
+xcuserdata
+*.xccheckout
+*.xcscmblueprint
+*.pbxuser
+.DS_Store
